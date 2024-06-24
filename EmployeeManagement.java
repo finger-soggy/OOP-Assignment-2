@@ -20,7 +20,7 @@ public class EmployeeManagement {
         for (int i=0; i<6; i++) {
             Employees[i].EmployeeData();
         }
-        System.out.println(Employees[0].name);
+        System.out.println(Employees[0].getName());
         for (int i=0; i<6; i++) {
             name = "";
             System.out.println("Please Enter Employee "+ (i+1) + " name: ");
