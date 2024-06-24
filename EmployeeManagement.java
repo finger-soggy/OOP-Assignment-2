@@ -1,5 +1,7 @@
 package employeemanagement;
+import java.text.DecimalFormat;
 import java.util.*;
+
 
 public class EmployeeManagement {
     
@@ -8,6 +10,7 @@ public class EmployeeManagement {
         String name;
         long ID;
         double salaryFinal, totalSalary=0;
+        DecimalFormat numberformat = new DecimalFormat("#.00");
         Scanner in = new Scanner(System.in);
         Scanner inString = new Scanner(System.in).useDelimiter("\n");
         EmployeeData[] Employees = new EmployeeData[6];
@@ -20,7 +23,6 @@ public class EmployeeManagement {
         for (int i=0; i<6; i++) {
             Employees[i].EmployeeData();
         }
-        System.out.println(Employees[0].getName());
         for (int i=0; i<6; i++) {
             name = "";
             System.out.println("Please Enter Employee "+ (i+1) + " name: ");
@@ -37,12 +39,12 @@ public class EmployeeManagement {
             salaryFinal = Employees[i].finalSalary(Employees[i].getSalary(), Employees[i].getBonus(), sales);
             System.out.println("Name: " + Employees[i].getName());
             System.out.println("ID: " + Employees[i].getID());
-            System.out.println("Salary for this employee: RM" + salaryFinal);
+            System.out.println("Salary for this employee: RM" + numberformat.format(salaryFinal));
             Employees[i].setSalary(salaryFinal);
             totalSalary += salaryFinal;
         }
         
-        System.out.println("The total salary for the team is: RM" + totalSalary);
+        System.out.println("The total salary for the team is: RM" + numberformat.format(totalSalary));
     }
 
  
