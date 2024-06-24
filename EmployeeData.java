@@ -2,8 +2,8 @@
 package employeemanagement;
 
 public class EmployeeData {
-    protected long ID;
-    protected String name;
+    private long ID;
+    private String name;
     protected double salary;
     protected double bonus;
     protected int targetSales;
