@@ -2,7 +2,6 @@ package employeemanagement;
 import java.text.DecimalFormat;
 import java.util.*;
 
-
 public class EmployeeManagement {
     
     public static void main(String[] args) {
